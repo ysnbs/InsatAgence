@@ -144,6 +144,7 @@ body{
     display: flex;
     justify-content: center;
     z-index: 4000;
+    background-color: #eee;
 }
 .partTwo ul{
     list-style-type: none;
@@ -212,7 +213,7 @@ body{
 body{
  background: linear-gradient(
     to bottom,
-    #f8f6f2,  
+    #ffffff 50%, 
     #0d6efd   
   );
    background-repeat: no-repeat;
