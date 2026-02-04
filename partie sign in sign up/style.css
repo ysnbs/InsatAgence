@@ -1,0 +1,306 @@
+*{
+    margin : 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* font-family: "Playwrite NZ Basic", cursive; */
+    font-family: "Playwrite NZ Basic", cursive;
+}
+
+:root{
+    --mainColor : rgba(14, 59, 148, 0.969);
+    --mainColorAfta7- : rgba(22, 77, 187, 0.969);
+    --backgroundImage : url("plane.webp");
+}
+
+
+/* bacground */
+
+div.background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: var(--backgroundImage);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+div.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #00000017;
+    backdrop-filter: blur(8px);
+}
+
+
+/* reglage ta3 el partie li feha lektibaaa */
+div.container{
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 75dvh;
+    color: white;
+    background-image: var(--backgroundImage);
+    background-size: cover;
+    background-position: left center;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.159) ;
+    align-items: center;
+}
+
+
+/* partie responsive */
+@media (max-width: 830px) {
+    div.overlay,
+    div.background{
+        display: none;
+    }
+    div.container{
+        flex-flow: column nowrap;
+        height: 100dvh;
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        border-radius: 0px;
+        background-position: center center;
+        min-height: 900px;
+        overflow-y: auto;
+
+    }
+
+}
+
+
+/* reglage ta3 l partie li 3alisar */
+div.container .one{
+    width: 60%;
+    padding: 40px 70px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 85%;
+}
+
+div.container .one .up h3{
+    font-weight: bolder;
+    font-size: 1.7em;
+    text-align: left;
+}
+
+div.container .one .down p{
+    line-height: 1.2;
+    font-size: 0.9em;
+    font-weight: lighter;
+    margin-top: 10px;
+}
+div.container .one .down ul{
+    list-style-type: none;
+    width: 50%;
+    max-width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+}
+div.container .one .down ul li a{
+    color:white;
+    font-size: 1.3em;
+}
+
+div.container .one .down ul li a:hover{color: var(--mainColorAfta7-);}
+
+/* partie li 3alimin */
+
+.container .two{
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 40%;
+    height: 100%;
+}
+
+.container .two form{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    height: 100%;
+    width: 100%;
+}
+.container .two form .text h3 {
+    font-size: 2em;
+    font-weight: bolder;
+    transform: translateY(-35px);
+}
+
+.container .two form .input{
+    /* background-color: rebeccapurple; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* width: clamp(80%,80%,50px); */
+    min-width: 100px;
+    width: 80%;
+    max-width: 350px;
+}
+
+.container .two form .input input{
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px white solid;
+    padding: 5px;
+    width: 100%;
+    outline: none;
+    color: white;
+    padding-right: 20px;
+    margin-bottom: 10px;
+}
+
+.container .two form .input input::placeholder{
+    color: white;
+    font-size: 0.8em;
+
+}
+
+.container .two form .input > div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    width: 100%;
+}
+.container .two form .input div p{
+    font-size: 0.7em;
+    margin-left: 6px;
+
+}
+
+.container .two form .input div{
+    min-width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.container .two form .input div input{
+    height: 13px;
+    width: 13px;
+    margin-top: 3px;
+}
+
+
+.container .two form .input div a{
+    color: white;
+    font-weight: bold;
+    color: white;
+    font-size: 0.7em;
+    text-decoration: none;
+}
+.container .two form .input div a:hover{color: var(--mainColorAfta7-);}
+
+
+
+.container .two form .input > div div {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row nowrap;
+
+}
+
+
+
+
+/* partie button */
+
+
+.container .two form .butt{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 2em auto;
+    width: 100%;
+}
+.container .two form .butt > input[type="submit"]{
+    padding: 10px;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    min-width: 100px;
+    width: 80%;
+    max-width: 350px;
+    background-color: var(--mainColor);
+    font-weight: 400;
+}
+
+.container .two form .butt div{
+    display: flex;
+    margin: 25px auto;
+    width: fit-content;
+
+}
+.container .two form .butt div p,
+.container .two form .butt div a{
+    font-size: 0.72em;
+    text-decoration: none;
+    color: white;
+}
+.container .two form .butt div a{font-weight: bold; margin-left: 10px;}
+.container .two form .butt div a:hover{color: var(--mainColorAfta7-);}
+
+.container .two form .butt > input[type="submit"]:hover{background-color: var(--mainColorAfta7-);}
+
+
+
+
+/* partie responsive */
+@media (max-width:830px){
+    div.container .one{
+        width: 95%;
+        height: 50%;
+        justify-content: center;
+        align-content: center;
+    }
+    div.container .two{
+        width: 100%;
+        height: 50%;
+        justify-content: center;
+        align-content: center;
+    }
+    .container .two form{
+        height: 100%;
+        justify-content: center;
+        align-content: center;
+    }
+    .container .two form .text h3 {
+        transform: translateY(-15px);
+    }
+}
+
+/* end of sign in  */
+
+
+/* start of sign up   */
