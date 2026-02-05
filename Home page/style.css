@@ -1,0 +1,714 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* color palette  */
+
+    /* couleur deep blue hedha ==>  Navbar, headings, links */
+    --main-color : #0B5ED7;
+    /* couleur sky blue ==>  */
+
+    --secondaryColor : #5DA9E9;
+    /* color orange coral  ==> Buttons, prices, highlights*/
+    --accentColor : #FF6B35; 
+    /* color soft white ==> Always dark on light backgrounds */
+    --backgroundColor : #F8FAFC;
+    /* text color  */
+    --textColor : #1F2933;
+}
+
+body{
+    min-width: 400px;
+}
+/* regle generale  */
+
+.container{
+    height: fit-content;
+    padding-left : 40px;
+    padding-right: 40px;
+    width: 100%;
+}
+
+/* fin regle generale  */
+
+
+.partOne{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+
+.partOne .logo{display: flex; align-items: center;}
+.partOne .logo img{width: 100px;user-select: none;}
+.partOne .logo p{font-size: 2em; user-select: none;}
+.partOne .logo p span{font-weight: bold;}
+
+.partieTel,.partieLocalisation{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+.partOne .fa-solid{
+    color: var(--accentColor);
+    border: 1px solid #cfcfcf;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 18px;
+    
+}
+
+.partOne .text p{margin: 0;}
+.partOne .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transition: 0.15s ease all;
+}
+
+.partOne .text:hover{
+    color: var(--accentColor);
+    cursor: pointer;
+}
+.partOne div.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.partOne div.button a{
+    padding: 13px 30px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--textColor);
+    text-decoration: none;
+    border: 1.5px solid var(--accentColor);
+    border-radius: 7px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: 0.2s all ease;
+
+}
+.partOne div.button a:hover{
+    background-color: var(--accentColor);
+    color: white;
+}
+
+
+
+
+@media (max-width:1400px){
+    .container{padding-left: 20px;padding-right: 20px;}
+    .partOne .logo p{
+        max-width: 150px;
+        line-height: 30px;
+        font-size: 1.7em;
+    }
+}
+
+@media (max-width:1200px) {
+    .partOne{
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+@media (max-width:1050px){
+    .partieLocalisation , .partieTel{display: none;}
+    .partOne{
+        justify-content: space-around;
+        padding: 0;
+    }
+}
+
+@media(max-width:530px){
+    .partOne .logo p{display: none;}
+    .partOne div.button a{
+        padding: 10px 20px;
+    }
+}
+
+
+/* partie thenya  */
+
+.partTwo{
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    background-color: #eee;
+    z-index: 4000;
+    box-shadow: 0 -5px 50px 0 rgba(0, 0, 0, 0.511);
+}
+.partTwo ul{
+    list-style-type: none;
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    align-content: center;
+    max-width: 50vw;
+    height: 100%;
+    /* min-width: 300px; */
+}
+.partTwo ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.partTwo ul li a{
+    color: var(--textColor);
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.5s all ease-in-out;
+}
+.partTwo ul li a:hover{
+    color: var(--accentColor);
+}
+body{
+    min-height: 5000px;
+}
+
+
+
+@media (max-width:1200px) {
+    .partTwo ul{
+        width: 100%;
+        max-width: 80vw;
+    }
+}
+
+@media (max-width:750px) {
+    .partTwo{
+        position: initial;
+    }
+    ul{
+        justify-content: space-around;
+
+        min-width: 650px;
+    }
+}
+
+@media (max-width:650px) {
+    ul{
+        flex-direction: column;
+
+        width: 100%;
+    }
+    ul li{
+        padding: 15px;
+        border-bottom: 1px solid #acabab;
+    }
+    .last{
+        border-bottom: none ;
+    }
+    .partTwo{height: fit-content;}
+}
+
+
+
+/* reglage slider  */
+.sliderContainer{
+    height: calc(100vh - 180px);
+    overflow: hidden;
+    position: relative;
+}
+
+
+.sliderContainer figure{
+    margin: 0;
+    padding: 0;
+    width: 1100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+    animation : sliding 40s infinite;
+    position: relative;
+}
+
+
+.sliderContainer figure img{
+    float: left;
+    width: calc(100% / 11);
+    height: 100%;
+    object-fit: cover;
+
+}
+
+@keyframes sliding {
+    0%{ left: 0;}
+    9%{ left: 0}
+    10%{left: -100%;}
+    20%{left: -200%;}
+    19%{left: -100%;}
+    29%{left: -200%;}
+    30%{left: -300%;}
+    39%{left: -300%;}
+    40%{left: -400%;}
+    49%{left: -400%;}
+    50%{left: -500%;}
+    59%{left: -500%;}
+    60%{left: -600%;}
+    69%{left: -600%;}
+    70%{left: -700%;}
+    79%{left: -700%;}
+    80%{left: -800%;}
+    89%{left: -800%;}
+    90%{left: -900%;}
+    99%{left: -900%;}
+    100%{left: -1000%;}
+}
+
+
+.sliderContainer .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.55) 60%,
+    rgba(0, 0, 0, 0.85) 100%
+    );
+
+
+}
+
+.overlay2{
+    position: absolute;
+    top: 1.5vw;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/cloud11.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+
+
+}
+
+
+/* start of feature part  */
+
+.featureContainer{
+    width: 100%;
+    margin-top: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.textGeneral{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.textGeneral p:first-of-type{
+    font-size: 1.5em;
+    color: var(--accentColor);
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+.textGeneral p:nth-child(2){
+    font-size: 2em;
+    color: var(--textColor);
+    font-weight: 500;
+    margin-top: 10px;
+    font-weight: bold;
+    
+}
+.textGeneral p:nth-child(2) span{
+    font-size: 1.7em;
+    color: var(--secondaryColor);
+    font-weight: bold;
+}
+.textGeneral p:nth-child(3){
+    color: #7b7b7b;
+    font-size: 20px;
+    line-height: 1.15;
+    margin-top: 10px;
+    width: 60%;
+    text-align: center;
+}
+
+
+.featureContainer .featureCardContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    column-gap: 2em;
+    row-gap: 1em;
+    margin-top: 100px;+
+    max-width: calc(1200px + 6em);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.featureCardContainer .featureCard{
+    background-color: #f7f7f7;
+    padding: 10px 30px;
+    border-radius: 8px;
+    text-align: left;
+    min-height: 450px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    border: 1px solid #efeeee;
+    max-width: 300px;
+    cursor: pointer;
+    position: relative;
+}
+
+
+
+.featureCard i{
+    color: #5DA9E9;
+    font-size: 3.5em;
+    padding-left: 10px;
+    width: fit-content;
+    background-color: transparent;
+    position: inherit;
+    z-index: 3;
+}
+.featureCard h3{
+    font-size: 1.6em;
+    position: inherit;
+    z-index: 3;
+}
+.featureCard p:first-of-type{
+    color: #7b7b7b;
+    font-size: 19px;
+    position: inherit;
+    z-index: 3;
+}
+.featureCard p:last-of-type{
+    color: var(--secondaryColor);
+    font-size: 18px;
+    position: inherit;
+    z-index: 3;
+}
+
+.featureCard > p,
+.featureCard,
+.featureCard i{
+    transition: 0.3s all ease;
+}
+
+.featureCard:hover > p,
+.featureCard:hover i,
+.featureCard:hover h3 {
+    color: white ;
+}
+
+.featureCard span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: var(--secondaryColor);
+    transition: 0.3s all ease;
+    border-radius: inherit;
+    
+}
+.featureCard:hover span{height: 100%;}
+
+
+
+/* discover part  */
+
+.discovery{
+    margin-top: 150px;
+    padding-left: 0;
+    padding-right: 0vw;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 60vh;
+
+}
+.discoveryContainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    column-gap: 2em;
+}
+
+.discoveryContainer .discoveryText{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+
+.discoveryContainer .discoveryText div{
+    width: 60%;
+    padding-right: 3em;
+}
+.discoveryContainer .discoveryText div h1{
+    font-size: 3em;
+    color: var(--textColor);
+    margin-bottom: 7%;
+}
+.discoveryContainer .discoveryText div p{
+    color: #7b7b7b;
+    font-size: 18px;
+    margin-bottom: 7%;
+}
+
+.discovery .discoveryImg{
+    width: 90%;
+    margin-left: 10%;
+    height: 100%;
+    background-image: url(image/discImg1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+.discovery .discoveryImg img{
+    width: 250px;
+    aspect-ratio: 8/10;
+    position:absolute;
+    top: 15%;
+    left: -10%;
+    border: 7px solid white;
+    outline: rgba(0, 0, 0, 0.14) 1px solid;
+    
+}
+
+.discovery .discoveryImg img:last-of-type{
+    left: 10%;
+    top: 25%;
+}
+
+
+.discovery .discoveryText div img{
+    width: 150px;
+
+}
+/* end of discover part  1*/
+
+
+/* start of .discovery part 1  */
+
+.discovery2{
+    margin-top: 150px;
+    display: flex;
+    justify-content: flex-start;
+    height: 60vh;
+}
+
+.discoveryContainer2{
+    width: 100%;
+    display: flex;
+}
+
+.discoveryContainer2 .discoveryImg2{
+    background-image: url(image/discImg2.png);
+    width: 40%;
+    background-size: contain;
+    background-clip: content-box;
+    position: relative;
+    background-repeat: no-repeat;
+}
+.discoveryText2{
+    height: 20vh;
+    background-color: #bfe6ee;
+    width: 40%;
+    height: 75%;
+    padding: 5rem 1rem 5rem 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-10%,5%);
+}
+
+.discoveryText2 p:first-child{
+    font-weight: 300;
+    font-size: clamp(1em, 5vw ,1.7em);
+    position: relative;
+}
+.discoveryText2 p:first-child::before{
+    content: '"';
+    position: absolute;
+    left: -5%;
+}
+
+.discoveryText2 div{
+    height: fit-content;
+    position: relative;
+}
+.discoveryText2 div::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10%;
+    height: 100%;
+    background-color: var(--textColor);
+    width: 3px;
+}
+.discoveryText2 p:last-of-type{
+    color: #444;
+    margin-top: 20px;
+}
+
+
+/* warning : fel discovery ne9sa partie responsive fehom el zouz  */
+
+
+/* end of discovery area  */
+
+
+/* start of top destination  */
+
+.topDestText{
+    margin-top: 120px;
+}
+.destGrid{
+    height: 100vh;
+    padding: 2em 10em;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 3em;
+    grid-template-areas: "one one one one one one two two two two" "three three three four four four two two two two";
+}
+.destGrid .one,
+.destGrid .two,
+.destGrid .three,
+.destGrid .four{
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.destGrid img{
+    width: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+    transition: 0.5s all ease;
+    height: 100%;
+    position:relative;
+    cursor: pointer;
+}
+.gridLayer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(ellipse at center,rgba(0, 0, 0, 0.1) 0%,rgba(0, 0, 0, 0.307) 60%,rgba(0, 0, 0, 0.357) 100%);
+}
+
+.destGrid > div:hover > .bg{
+    background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.55) 60%,
+    rgba(0, 0, 0, 0.85) 100%
+    );
+    transform: scale(1.2);
+}
+.destGrid .place{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 2.5em;
+    margin-bottom: 2em;
+    
+}
+.destGrid .place h2{
+    color:white;
+    font-size: 1.7em;
+    text-shadow: 0px 0px 10px black;
+    text-transform: uppercase;
+}
+
+.destGrid .place h3{
+    color:rgb(255, 251, 129);
+    font-size: 1.2em;
+    text-shadow: 0px 0px 10px black;
+    letter-spacing: 3px;
+}
+.destGrid .nbre{
+    background-color: var(--main-color);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 2em;
+    margin-right: 2.5em;
+    padding: 5px 10px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.651);
+}
+.destGrid .one{grid-area: one;}
+.destGrid .two{grid-area: two;}
+
+.destGrid .three{grid-area: three;}
+.destGrid .four{grid-area: four;}
+
+/* warning : ne9setha partie responsive design  */
+
+
+/* partie bondroll  */
+.bondroll{
+    margin-top: 150px;
+    width: 100%;
+    background-color: #eee;
+    min-height: 30vh;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bondrollContainer{
+    margin: auto;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 50px;
+
+}
+.bondrollContainer .bondrollCard{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5em;
+    padding: 3em;
+}
+
+.bondrollContainer i{
+    color: var(--accentColor);
+    font-size: 2.5em;
+}
+.bondrollContainer h3{
+    font-size: 20px;
+}
+.bondrollContainer p{
+    color: #7b7b7b;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* warning : responsive design neaded    */
+/* end of bondroll part  */
