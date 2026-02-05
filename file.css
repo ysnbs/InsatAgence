@@ -1,0 +1,74 @@
+.comment-header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap:20px;
+}
+
+.commentinfo {
+    display: flex;
+    align-items: center;
+    gap:3px;
+}
+.decalage{
+    margin-left:10px;
+}
+.commentcontent{
+    margin-left:10px;
+}
+.card{
+margin-left:20 px;
+margin-right:20px;
+}
+nav{
+    width: 90%;
+    margin: auto;  
+     z-index: 1000;   
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+     gap: 15px;
+     font-size: 22px;
+     font-family: 'Times New Roman', Times, serif;
+     padding-left: 15px;
+     padding-top: 10px;
+     box-sizing: border-box;
+     
+}
+.lien{
+    transition: all 0.5s ease;
+}
+.lien:hover{
+ scale: 1.025;
+  transition: all 0.5s ease;
+}
+.commentcontent {
+  white-space: pre-wrap;   
+  word-break: break-word;    
+  overflow-x: auto;       
+}
+.btnshare{
+ padding-right:10px;
+ font-size: 18px;
+ font-family: 'Times New Roman', Times, serif;
+  height: 40px;
+  margin :  auto auto;
+}
+.urcomment{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    padding: 10px 10px;
+}
+.form-label{
+
+    font-weight: 500;
+}
+.formreview{
+    display: flex;
+    flex-direction: row;
+    gap : 20px;
+    padding-left: 12px ;
+    padding-top: 10px;
+    font-size: 22px;
+}

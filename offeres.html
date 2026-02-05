@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="offre.css">
+</head>
+<body>
+<nav class="nav nav-pills nav-justified nav">
+  <a class="nav-link active lien" aria-current="page" href="#">Home</a>
+  <a class="nav-link active lien" aria-current="page" href="#">Services</a>
+  <a class="nav-link active lien" href="#">review</a>
+  <a class="nav-link active lien" href="#">Contact us</a>
+  <a class="nav-link active lien" aria-disabled="true">Log out</a>
+</nav>
+<div class="filtre">
+    <div class="espace">
+    <select class="form-select" aria-label="Default select example">
+        <option selected>From</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+    </select>
+    <select class="form-select" aria-label="Default select example">
+        <option selected>To</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+    </select>
+    <select class="form-select" aria-label="Default select example">
+        <option selected>From Airport</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+    </select>
+    <select class="form-select" aria-label="Default select example">
+        <option selected>To airport</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+    </select>
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Airline</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+    </select>
+    </div>
+    <div class="temps">    
+        <div class="heure">
+            <label for="appt1">Choose hour</label>
+            <input class="form-control" type="time" id="appt1" name="time">
+        </div>    
+        <div class="date">
+            <label for="appt2">Choose date</label>
+            <input class="form-control" type="date" id="appt2" name="date">
+        </div>
+    </div>
+    <div class="price">
+        <div class="input-group mb-3">
+        <span class="input-group-text">€</span>
+        <div class="form-floating">
+        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Price min">
+        <label for="floatingInputGroup1">price min</label>
+        </div>
+    </div>
+        <div class="input-group mb-3">
+        <span class="input-group-text">€</span>
+        <div class="form-floating">
+        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="pricemax">
+        <label for="floatingInputGroup1">price max</label>
+        </div>
+    </div>
+  </div>
+  <div class=btnapply>
+  
+     <select class="form-select" aria-label="Default select example">
+        <option selected>Price order</option>
+        <option value="descending">descending</option>
+        <option value="ascending">ascending</option>
+    </select>
+      <button type="button" class="btn btn-primary">Apply</button>
+  </div>
+</div>
+<table class="table table-light">
+  <thead>
+        <tr>
+            <th>Id</th>
+            <th>From</th>
+            <th>To</th>
+            <th>From Airport</th>
+            <th>To Airport</th>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Price</th>
+            <th>Remaining places</th>
+            <th>Action</th>
+        </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td>1</td>
+  <td>Tunis</td>
+  <td>Paris</td>
+  <td>Carthage</td>
+  <td>CDG</td>
+  <td>01/02/2026</td>
+  <td>08:30</td>
+  <td>250€</td>
+  <td>50</td>
+  <td>
+    <button class="btn btn-primary btn-sm">
+      <i class="bi bi-ticket-perforated"></i> Réserver
+    </button>
+  </td>
+</tr>
+
+  <tr>
+    <td>2</td>
+    <td>Paris</td>
+    <td>Tunis</td>
+    <td>CDG</td>
+    <td>Carthage</td>
+    <td>02/02/2026</td>
+    <td>14:15</td>
+    <td>260€</td>
+    <td>45</td>
+    <td>
+    <button class="btn btn-primary btn-sm">
+      <i class="bi bi-ticket-perforated"></i> Réserver
+    </button>
+  </td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Tunis</td>
+    <td>London</td>
+    <td>Carthage</td>
+    <td>Heathrow</td>
+    <td>03/02/2026</td>
+    <td>09:00</td>
+    <td>300€</td>
+    <td>40</td>
+    <td>
+    <button class="btn btn-primary btn-sm">
+      <i class="bi bi-ticket-perforated"></i> Réserver
+    </button>
+  </td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>London</td>
+    <td>Tunis</td>
+    <td>Heathrow</td>
+    <td>Carthage</td>
+    <td>04/02/2026</td>
+    <td>17:45</td>
+    <td>310€</td>
+    <td>35</td>
+    <td>
+    <button class="btn btn-primary btn-sm">
+      <i class="bi bi-ticket-perforated"></i> Réserver
+    </button>
+  </td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Tunis</td>
+    <td>Rome</td>
+    <td>Carthage</td>
+    <td>Fiumicino</td>
+    <td>05/02/2026</td>
+    <td>12:30</td>
+    <td>280€</td>
+    <td>42</td>
+    <td>
+    <button class="btn btn-primary btn-sm">
+      <i class="bi bi-ticket-perforated"></i> Réserver
+    </button>
+  </td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>Rome</td>
+    <td>Tunis</td>
+    <td>Fiumicino</td>
+    <td>Carthage</td>
+    <td>06/02/2026</td>
+    <td>16:00</td>
+    <td>290€</td>
+    <td>38</td>
+    <td>
+    <button class="btn btn-primary btn-sm">
+      <i class="bi bi-ticket-perforated"></i> Réserver
+    </button>
+  </td>
+  </tr>
+</tbody>
+</table>
+<div class="alert alert-warning" role="alert">
+  You maybe need a visa for this flight!<br>
+  Ticket reservation through this website does not guarantee the completion of the journey.
+</div>
+</body>
+</html>
