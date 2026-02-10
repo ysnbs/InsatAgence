@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="reports.css">
+</head>
+
+<body>
+<header>
+        <!-- partie fou9aneya  -->
+        <div class="partOne container">
+            <div class="logo">
+                <img src="nav bar\Home page/logo2.jpeg" alt="">
+                <p>WorldLink <span>Travel</span></p>
+            </div>
+            <div class="partieTel">
+                <i class="fa-solid fa-phone"></i>
+                <div class="text">
+                    <p>+216 52 760 246</p>
+                    <p>+216 50 559 320</p>
+                </div>
+            </div>
+            <div class="partieLocalisation">
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="text">
+                    <p>2130 INSAT centre urbain</p>
+                    <p>BEN AROUS, CA 94117-1080</p>
+                </div>
+            </div>
+            <div class="button">
+                <a href="">Find your tour</a>
+            </div>
+        </div>
+
+</header>
+    <!-- partie loutaneya  -->
+<div class="partTwo">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#offer">Our Offers</a></li>
+            <li><a href="#client">Avis Clients</a></li>
+            <li><a href="#destination">Destination</a></li>
+            <li><a href="#historique">Historique</a></li>
+            <li class="last"><a href="#contact" >Contact</a></li>
+        </ul>
+</div>
+<div class="containerstats">
+<div class="now">
+    <div class="card">
+        <div class="price">
+            <h3> all gain this month  </h3>
+            <span>300000<i  class="fa-solid fa-euro-sign"></i></span>
+        </div>
+        <div class="number">
+            <h3>number of tickets this month  </h3>
+            <span>10000000</span>
+        </div>   
+    </div>
+    <div class="card">
+        <div class="price">
+            <h3> all gain today </h3>
+            <span>300000<i  class="fa-solid fa-euro-sign"></i></span>
+        </div>
+        <div class="number">
+            <h3>number of tickets today </h3>
+            <span>10000000</span>
+        </div>   
+    </div>
+    <div class="card">
+        <div class="price">
+            <h3> all gain this year </h3>
+            <span>300000<i  class="fa-solid fa-euro-sign"></i></span>
+        </div>
+        <div class="number">
+            <h3>number of tickets this year </h3>
+            <span>10000000</span>
+        </div>   
+    </div>
+    <div class="card">
+        <div class="price">
+            <h3> all gain </h3>
+            <span>300000<i  class="fa-solid fa-euro-sign"></i></span>
+        </div>
+        <div class="number">
+            <h3>number of tickets </h3>
+            <span>10000000</span>
+        </div>   
+    </div>
+</div>
+ <div class="chart-container">
+    <div class="year">
+      <canvas id="priceChartYear"></canvas>
+    </div>
+    <div class="mois">
+      <canvas id="priceChart"></canvas>
+    </div>
+    <div class="jours">
+      <canvas id="priceChartDay"></canvas>
+    </div>
+  </div>
+  <div class="ticketchart">
+    <div class="year">
+      <canvas id="ticketChartYear"></canvas>
+    </div>
+    <div class="mois">
+      <canvas id="ticketChart"></canvas>
+    </div>
+    <div class="jours">
+      <canvas id="ticketChartDay"></canvas>
+    </div>
+  </div>
+<div class="directionstat">
+    <div class="filters">
+  <select id="filterYear">
+    <option value="">All Years</option>
+    <option value="2026">2026</option>
+    <option value="2023">2023</option>
+  </select>
+
+  <select id="filterMonth">
+    <option value="">All Months</option>
+    <option value="1">Jan</option>
+    <option value="2">Feb</option>
+    <!-- etc -->
+  </select>
+
+  <select id="filterDay">
+    <option value="">All Days</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <!-- etc -->
+  </select>
+
+  <select id="filterDestination">
+    <option value="">All Destinations</option>
+    <option value="Paris">Paris</option>
+    <option value="London">London</option>
+    <!-- etc -->
+  </select>
+</div>
+<div class="ticketbarchar">
+
+<canvas id="ticketBarChart"></canvas>
+
+  </div>
+</div>/
+
+  <!-- Histogramme prix -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+new Chart(document.getElementById('priceChartYear'), {
+  type: 'line',
+  data: {
+    labels: ['2020','2021','2022','2023','2024','2025','2026'],
+    datasets: [{
+      label: 'Revenus par année (€)',
+      data: [15000, 18000, 22000, 20000, 25000, 30000, 35000],
+      fill: true,
+      backgroundColor: 'rgba(54, 162, 235, 0.2)',
+      borderColor: 'rgba(54, 162, 235, 1)',
+      tension:0.4,
+      pointRadius:5,
+      pointHoverRadius:7
+    }]
+  },
+  options: { responsive:true,maintainAspectRatio: false, plugins:{ title:{ display:true, text:'Revenus Année', font:{size:18} } }, scales:{ y:{ beginAtZero:true }, x:{} } }
+});
+
+// ----------- Mois -----------
+const yearforprice = 2026;
+new Chart(document.getElementById('priceChart'), {
+  type: 'line',
+  data: {
+    labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+    datasets: [{
+      label: `Revenus par mois (${yearforprice}) (€)`,
+      data: [1200,1500,1700,1600,1800,2000,2100,1900,2200,2300,2100,2500],
+      fill: true,
+      backgroundColor: 'rgba(75, 192, 192, 0.2)',
+      borderColor: 'rgba(75, 192, 192, 1)',
+      tension:0.4,
+      pointRadius:5,
+      pointHoverRadius:7
+    }]
+  },
+  options:{ responsive:true,maintainAspectRatio: false, plugins:{ title:{ display:true, text:'Revenus Mensuels', font:{size:18} } },scales:{ y:{ beginAtZero:true }, x:{} } }
+});
+
+// ----------- Jour -----------
+const monthforprice = "Jan";
+new Chart(document.getElementById('priceChartDay'), {
+  type: 'line',
+  data: {
+    labels: Array.from({length:31}, (_,i)=>i+1),
+    datasets: [{
+      label: 'Revenus par jour (€)',
+      data: Array.from({length:31}, ()=>Math.floor(Math.random()*500 + 500)),
+      fill: true,
+      backgroundColor: 'rgba(255, 99, 132, 0.2)',
+      borderColor: 'rgba(255, 99, 132, 1)',
+      tension:0.4,
+      pointRadius:3,
+      pointHoverRadius:5
+    }]
+  },
+  options:{ responsive:true, maintainAspectRatio: false, plugins:{ title:{ display:true, text:`Revenus Journaliers (${monthforprice})`, font:{size:18} } },scales:{ y:{ beginAtZero:true }, x:{} } }
+});
+</script>
+<script>
+  const data = {
+    labels: ['Tickets achetés', 'Tickets restants'],
+    datasets: [{
+      label: 'Tickets',
+      data: [70, 30], // exemple : 70% achetés, 30% restants
+      backgroundColor: [
+        'rgba(54, 162, 235, 0.8)', // bleu
+        'rgba(255, 206, 86, 0.8)'  // jaune
+      ],
+      borderColor: '#fcfefd', // pour créer un espace entre arcs
+      borderWidth: 6,       // plus c'est grand, plus l'espace est visible
+      hoverOffset: 10,   // léger décalage au survol
+      borderRadius: 8,
+    }]
+  };
+
+  const year = 2026;
+  const config = {
+    type: 'doughnut',
+    data: data,
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+          labels: {
+            font: { size: 14 }
+          }
+        },
+        title: {
+          display: true,
+          text: `Tickets per ${year}`,
+          font: { size: 18, weight: 'bold' }
+        }
+      },
+      cutout: '60%' // rend le doughnut plus fin
+    },
+  };
+  const mois = "Janvier";
+  const config1 = {
+    type: 'doughnut',
+    data: data,
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+          labels: {
+            font: { size: 14 }
+          }
+        },
+        title: {
+          display: true,
+          text: `Tickets per ${mois}`,
+          font: { size: 18, weight: 'bold' }
+        }
+      },
+      cutout: '60%' // rend le doughnut plus fin
+    },
+  };
+  const day=1;
+  const config2 = {
+    type: 'doughnut',
+    data: data,
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+          labels: {
+            font: { size: 14 }
+          }
+        },
+        title: {
+          display: true,
+          text: `Tickets per day ${day}`,
+          font: { size: 18, weight: 'bold' }
+        }
+      },
+      cutout: '60%' // rend le doughnut plus fin
+    },
+  };
+
+  const ctx = document.getElementById('ticketChartYear').getContext('2d');
+  const ctx1 = document.getElementById('ticketChart').getContext('2d');
+  const ctx2 = document.getElementById('ticketChartDay').getContext('2d');
+
+  const ticketChart = new Chart(ctx, config);
+  const ticketChart1 = new Chart(ctx1, config1);
+  const ticketChart2= new Chart(ctx2, config2);
+
+</script>
+<script src="stats.js"></script>
+</body>
+</html>

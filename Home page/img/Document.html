@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://127.0.0.1:5500/index.html#home -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
+    
+    
+
+<link rel="stylesheet" href="./Document_files/style.css"><link rel="stylesheet" href="./Document_files/all.min.css"></head>
+<body>
+
+
+    <header>
+        <!-- partie fou9aneya  -->
+        <div class="partOne container">
+            <div class="logo">
+                <img src="./Document_files/logo2.jpeg" alt="">
+                <p>WorldLink <span>Travel</span></p>
+            </div>
+            <div class="partieTel">
+                <i class="fa-solid fa-phone"></i>
+                <div class="text">
+                    <p>+216 52 760 246</p>
+                    <p>+216 50 559 320</p>
+                </div>
+            </div>
+            <div class="partieLocalisation">
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="text">
+                    <p>2130 INSAT centre urbain</p>
+                    <p>BEN AROUS, CA 94117-1080</p>
+                </div>
+            </div>
+            <div class="button">
+                <a href="http://127.0.0.1:5500/index.html">Find your tour</a>
+            </div>
+        </div>
+
+    </header>
+    <!-- partie loutaneya  -->
+    <div class="partTwo">
+        <ul>
+            <li><a href="http://127.0.0.1:5500/index.html#home">Home</a></li>
+            <li><a href="http://127.0.0.1:5500/index.html#offer">Our Offers</a></li>
+            <li><a href="http://127.0.0.1:5500/index.html#client">Avis Clients</a></li>
+            <li><a href="http://127.0.0.1:5500/index.html#destination">Destination</a></li>
+            <li><a href="http://127.0.0.1:5500/index.html#historique">Historique</a></li>
+            <li class="last"><a href="http://127.0.0.1:5500/index.html#contact">Contact</a></li>
+        </ul>
+    </div>
+
+
+
+    <!-- partie slider d'image  -->
+
+    <main>
+        <div class="sliderContainer">
+            <figure>
+                    <img src="./Document_files/img1.jpeg" alt="">
+                    <img src="./Document_files/img2.jpeg" alt="">
+                    <img src="./Document_files/img7.jpg" alt="">
+                    <img src="./Document_files/img4.jpeg" alt="">
+                    <img src="./Document_files/img5.jpeg" alt="">
+                    <img src="./Document_files/img6.jpeg" alt="">
+                    <img src="./Document_files/img8.jpg" alt="">
+                    <img src="./Document_files/img9.avif" alt="">
+                    <img src="./Document_files/img10.jpg" alt="">
+                    <img src="./Document_files/img14.jpg" alt="">
+                    <img src="./Document_files/img1.jpeg" alt="">
+            </figure>
+            <span class="overlay"></span>
+            <span class="overlay2"></span>
+        </div>
+    </main>
+
+
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
