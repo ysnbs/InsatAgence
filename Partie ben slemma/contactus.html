@@ -69,7 +69,6 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 const contactDiv = document.querySelector(".contact");
-
 const colors = ["#ff4d6d", "#ffd60a", "#2ec4b6", "#4361ee", "#f72585"];
 
 let width, height;
@@ -78,10 +77,8 @@ let arraycircle = [];
 // ⭐ resize d'abord
 function resizeCanvas() {
   const ratio = window.devicePixelRatio || 1;
-
   width = contactDiv.offsetWidth;
   height = contactDiv.offsetHeight;
-
   canvas.width = width * ratio;
   canvas.height = height * ratio;
 
