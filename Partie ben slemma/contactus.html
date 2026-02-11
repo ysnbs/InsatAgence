@@ -62,7 +62,119 @@
         <i class="bi-envelope-fill"></i> 
         <a href="mailto:yassinbenslama13@gmail.com">Email:yassinbenslama13@gmail.com</a>
     </div>
-
+  
 </div>
+  <canvas id="canvas"></canvas>
+<script>
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+const colors = ["#ff4d6d", "#ffd60a", "#2ec4b6", "#4361ee", "#f72585"];
+
+let width, height;
+let arraycircle = [];
+
+// ⭐ resize d'abord
+function resizeCanvas() {
+  const ratio = window.devicePixelRatio || 1;
+
+  width = window.innerWidth;
+  height = window.innerHeight;
+
+  canvas.width = width * ratio;
+  canvas.height = height * ratio;
+
+  canvas.style.width = width + "px";
+  canvas.style.height = height + "px";
+
+  ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+}
+
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+
+// ⭐ objet
+function cercle() {
+  this.x = Math.random() * width;
+  this.y = Math.random() * height;
+  this.dx = (Math.random() - 0.5) * 2; 
+  this.dy = (Math.random() - 0.5) * 2;
+  this.r = Math.random() * 3 + 1;
+  this.color = colors[Math.floor(Math.random() * colors.length)];
+
+  this.draw = function() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+    ctx.fillStyle = this.color;
+    ctx.fill();
+  }
+
+  this.update = function() {
+
+    // ⭐ rebond propre
+    if (this.x + this.r > width) {
+      this.x = width - this.r;
+      this.dx = -this.dx;
+    }
+
+    if (this.x - this.r < 0) {
+      this.x = this.r;
+      this.dx = -this.dx;
+    }
+
+    if (this.y + this.r > height) {
+      this.y = height - this.r;
+      this.dy = -this.dy;
+    }
+
+    if (this.y - this.r < 0) {
+      this.y = this.r;
+      this.dy = -this.dy;
+    }
+
+    this.x += this.dx;
+    this.y += this.dy;
+
+    this.draw();
+  }
+}
+
+// ⭐ création APRÈS resize
+for (let i = 0; i < 100; i++) {
+  arraycircle.push(new cercle());
+}
+
+
+// ⭐ animation
+function animate() {
+  requestAnimationFrame(animate);
+  ctx.clearRect(0, 0, width, height);
+
+  for (let i = 0; i < arraycircle.length; i++) {
+    arraycircle[i].update();
+  }
+
+  // collisions
+  for (let i = 0; i < arraycircle.length; i++) {
+    for (let j = i + 1; j < arraycircle.length; j++) {
+
+      const dx = arraycircle[i].x - arraycircle[j].x;
+      const dy = arraycircle[i].y - arraycircle[j].y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance < arraycircle[i].r + arraycircle[j].r) {
+        arraycircle[i].dx = -arraycircle[i].dx;
+        arraycircle[i].dy = -arraycircle[i].dy;
+
+        arraycircle[j].dx = -arraycircle[j].dx;
+        arraycircle[j].dy = -arraycircle[j].dy;
+      }
+    }
+  }
+}
+
+animate();
+</script>
 </body>
 </html>

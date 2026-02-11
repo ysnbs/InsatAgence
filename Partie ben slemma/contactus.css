@@ -268,3 +268,11 @@ body{
     transition: 0.2s ease all;
     transform: scale(1.05);
 }
+#canvas {
+  position: fixed;   /* reste collé à l'écran */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;       /* derrière les éléments */
+}
