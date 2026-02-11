@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* font-family: "Poppins", sans-serif; */
+    font-family: "Poppins", sans-serif;
 }
 body{
     min-height: 5000px !important;
@@ -465,7 +467,7 @@ body{
     padding-right: 3em;
 }
 .discoveryContainer .discoveryText div h1{
-    font-size: 3em;
+    font-size: clamp(1.5em,5vw,2.5em );
     color: var(--textColor);
     margin-bottom: 7%;
 }
@@ -967,9 +969,11 @@ body{
     align-items: center;
     justify-content: center;
     gap: 1em;
-    animation: 5s spin infinite linear;
-
+    animation: 10s spin infinite linear;
     padding-right: 1em;
+}
+.carousel:hover .groupe{
+    animation-play-state:paused;
 }
 .carousel .groupe .card img{
     width: 100%;
