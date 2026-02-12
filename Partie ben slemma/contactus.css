@@ -215,6 +215,7 @@ body{
   background-attachment: fixed;
 }
 .contact{
+    overflow: hidden;
     position: absolute;
     left: 50%;
      min-height: calc(100vh - 280px);
