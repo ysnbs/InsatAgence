@@ -343,7 +343,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(img/cloud11.png);
+    background-image: url(../Images/imageMain/cloud11.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left bottom;
@@ -502,7 +502,7 @@ body{
     width: 90%;
     margin-left: 10%;
     height: 100%;
-    background-image: url(image/discImg1.png);
+    background-image: url(../Images/imageMain/discImg1.png);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -575,7 +575,7 @@ body{
 }
 
 .discoveryContainer2 .discoveryImg2{
-    background-image: url(image/discImg2.png);
+    background-image: url(../Images/imageMain/discImg1.png);
     width: 40%;
     background-size: contain;
     background-clip: content-box;

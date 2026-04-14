@@ -7,47 +7,13 @@
   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="historique.css">
+  <link rel="stylesheet" href="../assets/style/offre.css">
+  <link rel="stylesheet" href="../assets/style/navbar.css">
 </head>
-<body>
-<header>
-        <!-- partie fou9aneya  -->
-        <div class="partOne container">
-            <div class="logo">
-                <img src="nav bar\Home page/logo2.jpeg" alt="">
-                <p>WorldLink <span>Travel</span></p>
-            </div>
-            <div class="partieTel">
-                <i class="fa-solid fa-phone"></i>
-                <div class="text">
-                    <p>+216 52 760 246</p>
-                    <p>+216 50 559 320</p>
-                </div>
-            </div>
-            <div class="partieLocalisation">
-                <i class="fa-solid fa-location-dot"></i>
-                <div class="text">
-                    <p>2130 INSAT centre urbain</p>
-                    <p>BEN AROUS, CA 94117-1080</p>
-                </div>
-            </div>
-            <div class="button">
-                <a href="">Find your tour</a>
-            </div>
-        </div>
 
-</header>
-    <!-- partie loutaneya  -->
-<div class="partTwo">
-        <ul>
-            <li><a href="../Home page/index.html">Home</a></li>
-            <li><a href="offeres.html">Our Offers</a></li>
-            <li><a href="ClientReview.html">Avis Clients</a></li>
-            <li><a href="#destination">Destination</a></li>
-            <li><a href="historique.html">Historique</a></li>
-            <li class="last"><a href="contactus.html" >Contact</a></li>
-        </ul>
-</div>
+<body>
+<?php require("navbar.php"); ?>
+
 <div class="filtre">
     <div class="espace">
     <select class="form-select" aria-label="Default select example" name="from">
@@ -70,6 +36,12 @@
     </select>
     <select class="form-select" aria-label="Default select example">
         <option selected>To airport</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+    </select>
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Airline</option>
         <option value="1">One</option>
         <option value="2">Two</option>
         <option value="3">Three</option>
@@ -111,72 +83,124 @@
       <button type="button" class="btn btn-primary">Apply</button>
   </div>
 </div>
-    <table class="table table-light">
-    <thead>
+<table class="table table-light">
+  <thead>
         <tr>
-            <th>ID Reservation</th>
-            <th>ID Flight</th>
-            <th>Reservation Date</th>
-            <th>Reservation Time</th>
+            <th>Id</th>
             <th>From</th>
             <th>To</th>
             <th>From Airport</th>
             <th>To Airport</th>
             <th>Day</th>
-            <th>Flight Time</th>
+            <th>Time</th>
             <th>Price</th>
-            <th>Payment Mode</th>
+            <th>Remaining places</th>
+            <th>Action</th>
         </tr>
-    </thead>
+  </thead>
+  <tbody>
+  <tr>
+  <td>1</td>
+  <td>Tunis</td>
+  <td>Paris</td>
+  <td>Carthage</td>
+  <td>CDG</td>
+  <td>01/02/2026</td>
+  <td>08:30</td>
+  <td>250€</td>
+  <td>50</td>
+  <td>
+    <button class="btn btn-primary btn-sm">
+      <i class="bi bi-ticket-perforated"></i> Réserver
+    </button>
+  </td>
+</tr>
 
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>FL102</td>
-            <td>2026-02-01</td>
-            <td>09:15</td>
-            <td>Tunis</td>
-            <td>Paris</td>
-            <td>TUN</td>
-            <td>CDG</td>
-            <td>01/02/2026</td>
-            <td>11:30</td>
-            <td>850 DT</td>
-            <td>Card</td>
-        </tr>
-
-        <tr>
-            <td>2</td>
-            <td>FL215</td>
-            <td>2026-02-03</td>
-            <td>14:40</td>
-            <td>Tunis</td>
-            <td>Rome</td>
-            <td>TUN</td>
-            <td>FCO</td>
-            <td>01/02/2026</td>
-            <td>16:00</td>
-            <td>620 DT</td>
-            <td>Cash</td>
-        </tr>
-
-        <tr>
-            <td>3</td>
-            <td>FL330</td>
-            <td>2026-02-05</td>
-            <td>18:10</td>
-            <td>Sfax</td>
-            <td>Istanbul</td>
-            <td>SFA</td>
-            <td>IST</td>
-            <td>01/02/2026</td>
-            <td>20:45</td>
-            <td>980 DT</td>
-            <td>PayPal</td>
-        </tr>
-    </tbody>
+  <tr>
+    <td>2</td>
+    <td>Paris</td>
+    <td>Tunis</td>
+    <td>CDG</td>
+    <td>Carthage</td>
+    <td>02/02/2026</td>
+    <td>14:15</td>
+    <td>260€</td>
+    <td>45</td>
+    <td>
+    <button class="btn btn-primary btn-sm">
+      <i class="bi bi-ticket-perforated"></i> Réserver
+    </button>
+  </td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Tunis</td>
+    <td>London</td>
+    <td>Carthage</td>
+    <td>Heathrow</td>
+    <td>03/02/2026</td>
+    <td>09:00</td>
+    <td>300€</td>
+    <td>40</td>
+    <td>
+    <button class="btn btn-primary btn-sm">
+      <i class="bi bi-ticket-perforated"></i> Réserver
+    </button>
+  </td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>London</td>
+    <td>Tunis</td>
+    <td>Heathrow</td>
+    <td>Carthage</td>
+    <td>04/02/2026</td>
+    <td>17:45</td>
+    <td>310€</td>
+    <td>35</td>
+    <td>
+    <button class="btn btn-primary btn-sm">
+      <i class="bi bi-ticket-perforated"></i> Réserver
+    </button>
+  </td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Tunis</td>
+    <td>Rome</td>
+    <td>Carthage</td>
+    <td>Fiumicino</td>
+    <td>05/02/2026</td>
+    <td>12:30</td>
+    <td>280€</td>
+    <td>42</td>
+    <td>
+    <button class="btn btn-primary btn-sm">
+      <i class="bi bi-ticket-perforated"></i> Réserver
+    </button>
+  </td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>Rome</td>
+    <td>Tunis</td>
+    <td>Fiumicino</td>
+    <td>Carthage</td>
+    <td>06/02/2026</td>
+    <td>16:00</td>
+    <td>290€</td>
+    <td>38</td>
+    <td>
+    <button class="btn btn-primary btn-sm">
+      <i class="bi bi-ticket-perforated"></i> Réserver
+    </button>
+  </td>
+  </tr>
+</tbody>
 </table>
-
-    
+<div class="alert alert-warning" role="alert">
+  You maybe need a visa for this flight!<br>
+  Ticket reservation through this website does not guarantee the completion of the journey.
+</div>
 </body>
 </html>

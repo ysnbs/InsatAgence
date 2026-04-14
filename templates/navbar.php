@@ -4,19 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/style/navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 </head>
 <body>
 
 
     <header>
         <!-- partie fou9aneya  -->
-        <div class="partOne container">
+        <div class="partOne container-block">
             <div class="logo">
-                <img src="logo2.jpeg" alt="">
+                <img src="../assets/Images/logo.jpeg" alt="">
                 <p>WorldLink <span>Travel</span></p>
             </div>
             <div class="partieTel">
@@ -34,7 +32,7 @@
                 </div>
             </div>
             <div class="button">
-                <a href="">Find your tour</a>
+                <a href="interfaceSignIn.php">Find your tour</a>
             </div>
         </div>
 
@@ -42,15 +40,15 @@
     <!-- partie loutaneya  -->
     <div class="partTwo">
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#offer">Our Offers</a></li>
-            <li><a href="#client">Avis Clients</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="offeres.php">Our Offers</a></li>
+            <li><a href="ClientReview.php">Avis Clients</a></li>
             <li><a href="#destination">Destination</a></li>
-            <li><a href="#historique">Historique</a></li>
-            <li class="last"><a href="#contact" >Contact</a></li>
+            <li><a href="historique.php">Historique</a></li>
+            <li class="last"><a href="contactus.php" >Contact</a></li>
         </ul>
     </div>
-
+    <br>
 
 
 

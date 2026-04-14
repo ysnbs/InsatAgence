@@ -9,7 +9,7 @@
 :root{
     --mainColor : rgba(14, 59, 148, 0.969);
     --mainColorAfta7- : rgba(22, 77, 187, 0.969);
-    --backgroundImage : url("plane.webp");
+    --backgroundImage : url("../Images/interfaceSignIn/plane.webp");
 }
 
 

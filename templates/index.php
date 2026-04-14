@@ -5,77 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/style/indexStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="../assets/style/navbar.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head> 
 <body>
-
-
-    <header>
-        <!-- partie fou9aneya  -->
-        <div class="partOne container">
-            <div class="logo">
-                <img src="logo/logo2.jpeg" alt="">
-                <p>WorldLink <span>Travel</span></p>
-            </div>
-            <div class="partieTel">
-                <i class="fa-solid fa-phone"></i>
-                <div class="text">
-                    <p>+216 52 760 246</p>
-                    <p>+216 50 559 320</p>
-                </div>
-            </div>
-            <div class="partieLocalisation">
-                <i class="fa-solid fa-location-dot"></i>
-                <div class="text">
-                    <p>2130 INSAT centre urbain</p>
-                    <p>BEN AROUS, CA 94117-1080</p>
-                </div>
-            </div>
-            <div class="button">
-                <a href="../partie sign in sign up/index.html">Find your tour</a>
-            </div>
-        </div>
-
-    </header>
-    <!-- partie loutaneya  -->
-    <div class="partTwo">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="../Partie ben slemma/offeres.html">Our Offers</a></li>
-            <li><a href="../Partie ben slemma/ClientReview.html">Avis Clients</a></li>
-            <li><a href="#destination">Destination</a></li>
-            <li><a href="../Partie ben slemma/historique.html">Historique</a></li>
-            <li class="last"><a href="../Partie ben slemma/contactus.html" >Contact</a></li>
-        </ul>
-    </div>
-
-
+<?php require("navbar.php"); ?>
 
     <!-- partie slider d'image  -->
 
     <main>
         <div class="sliderContainer">
             <figure>
-                    <img src="img/img1.jpeg"  alt="">
-                    <img src="img/img2.jpeg"  alt="">
-                    <img src="img/img7.jpg"  alt="">
-                    <img src="img/img4.jpeg" alt="">
-                    <img src="img/img5.jpeg" alt="">
-                    <img src="img/img6.jpeg" alt="">
-                    <img src="img/img8.jpg" alt="">
-                    <img src="img/img9.avif" alt="">
-                    <img src="img/img10.jpg" alt="">
-                    <img src="img/img14.jpg" alt="">
-                    <img src="img/img1.jpeg"  alt="">
+                    <img src="../assets/Images/imageMain/img1.jpeg"  alt="">
+                    <img src="../assets/Images/imageMain/img2.jpeg"  alt="">
+                    <img src="../assets/Images/imageMain/img7.jpg"  alt="">
+                    <img src="../assets/Images/imageMain/img4.jpeg" alt="">
+                    <img src="../assets/Images/imageMain/img5.jpeg" alt="">
+                    <img src="../assets/Images/imageMain/img6.jpeg" alt="">
+                    <img src="../assets/Images/imageMain/img8.jpg" alt="">
+                    <img src="../assets/Images/imageMain/img9.avif" alt="">
+                    <img src="../assets/Images/imageMain/img10.jpg" alt="">
+                    <img src="../assets/Images/imageMain/img14.jpg" alt="">
+                    <img src="../assets/Images/imageMain/img1.jpeg"  alt="">
             </figure>
             <span class="overlay"></span>
             <span class="overlay2"></span>
@@ -144,12 +103,12 @@
                     <h1>Explore a different way to travel</h1>
                     <p>Discover new cultures and have a wonderful rest with Backpack Story! Select the country you’d like to visit and provide our agents with estimated time – they’ll find and offer the most suitable tours and hotels.</p>
                     <p>During our work we organized countless journeys for our clients. We started as a small tour bureau, and soon we expanded our offers list. Today we have valuable experience travelling and we can advise the most stunning resorts, cities and countries to visit!</p>
-                    <img src="image/signature.jpg" alt="">
+                    <img src="../assets/Images/imageMain/signature.jpg" alt="">
                 </div>
             </div>
             <div class="discoveryImg">
-                <img src="image/img1.jpg" alt="">
-                <img src="image/img2.jpg" alt="">
+                <img src="../assets/Images/Project developpement web/Swisse/touristische_b04.jpg" alt="">
+                <img src="../assets/Images/Project developpement web/Swisse/68f8c6b3eba00.jpg" alt="">
             </div>
         </div>
 
@@ -204,7 +163,7 @@
         <div class="destGrid">
             <div class="one">
                 
-                <img src="image/image3.jpg" class="bg" alt="">
+                <img src="../assets/Images/imageMain/image3.jpg" class="bg" alt="">
                 <span class="gridLayer"></span>
                 <div class="place">
                     <h3>italy</h3>
@@ -214,7 +173,7 @@
             </div>
             <div class="two">
                 
-                <img src="image/london.webp" class="bg" alt="">
+                <img src="../assets/Images/imageMain/london.webp" class="bg" alt="">
                 <span class="gridLayer"></span>
                 <div class="place">
                     <h3>England</h3>
@@ -224,7 +183,7 @@
             </div>
             <div class="three">
                 
-                <img src="image/russia.jpg" class="bg" alt="">
+                <img src="../assets/Images/imageMain/russia.jpg" class="bg" alt="">
                 <span class="gridLayer"></span>
                 <div class="place">
                     <h3>Moscow</h3>
@@ -234,7 +193,7 @@
             </div>
             <div class="four">
                 
-                <img src="image/florida.jpg" class="bg" alt="">
+                <img src="../assets/Images/imageMain/florida.jpg" class="bg" alt="">
                 <span class="gridLayer"></span>
                 <div class="place">
                     <h3>Florida</h3>
@@ -256,55 +215,55 @@
         <div class="carousel">
             <div class="groupe">
                 <div class="card">
-                    <img src="logo/Air-Canada-Logo.png" alt="">
+                    <img src="../assets/Images/Logo/Air-Canada-Logo.png" alt="">
                 </div>
                 <div class="card">
-                    <img src="logo/Air_France_Logo.svg.png" alt="">
+                    <img src="../assets/Images/Logo/Air_France_Logo.svg.png" alt="">
                 </div>
                 <div class="card">
-                    <img src="logo/British_Airways-Logo.wine.png" alt="">
+                    <img src="../assets/Images/Logo/British_Airways-Logo.wine.png" alt="">
                 </div>
                 <div class="card">
-                    <img src="logo/Turkish_Airlines_logo_2019_compact.svg.png" alt="">
+                    <img src="../assets/Images/Logo/Turkish_Airlines_logo_2019_compact.svg.png" alt="">
                 </div>
                 <div class="card">
-                    <img src="logo/Tunisair_(logo).svg" alt="">
+                    <img src="../assets/Images/Logo/Tunisair_(logo).svg" alt="">
                 </div>
                 <div class="card">
-                    <img src="logo/Qatar_Airways_logo.svg.png" alt="">
+                    <img src="../assets/Images/Logo/Qatar_Airways_logo.svg.png" alt="">
                 </div>
                 <div class="card">
-                    <img src="logo/Qantas-Logo.png" alt="">
+                    <img src="../assets/Images/Logo/Qantas-Logo.png" alt="">
                 </div>
                 <div class="card">
-                    <img src="logo/Japan-Airlines-logo.webp" alt="">
+                    <img src="../assets/Images/Logo/Japan-Airlines-logo.webp" alt="">
                 </div>
 
             </div>
             <div class="groupe">
                 <div class="card">
-                    <img src="logo/Air-Canada-Logo.png" alt="">
+                    <img src="../assets/Images/Logo/Air-Canada-Logo.png" alt="">
                 </div>
                 <div class="card">
-                    <img src="logo/Air_France_Logo.svg.png" alt="">
+                    <img src="../assets/Images/Logo/Air_France_Logo.svg.png" alt="">
                 </div>
                 <div class="card">
-                    <img src="logo/British_Airways-Logo.wine.png" alt="">
+                    <img src="../assets/Images/Logo/British_Airways-Logo.wine.png" alt="">
                 </div>
                 <div class="card">
-                    <img src="logo/Turkish_Airlines_logo_2019_compact.svg.png" alt="">
+                    <img src="../assets/Images/Logo/Turkish_Airlines_logo_2019_compact.svg.png" alt="">
                 </div>
                 <div class="card">
-                    <img src="logo/Tunisair_(logo).svg" alt="">
+                    <img src="../assets/Images/Logo/Tunisair_(logo).svg" alt="">
                 </div>
                 <div class="card">
-                    <img src="logo/Qatar_Airways_logo.svg.png" alt="">
+                    <img src="../assets/Images/Logo/Qatar_Airways_logo.svg.png" alt="">
                 </div>
                 <div class="card">
-                    <img src="logo/Qantas-Logo.png" alt="">
+                    <img src="../assets/Images/Logo/Qantas-Logo.png" alt="">
                 </div>
                 <div class="card">
-                    <img src="logo/Japan-Airlines-logo.webp" alt="">
+                    <img src="../assets/Images/Logo/Japan-Airlines-logo.webp" alt="">
                 </div>
 
             </div>
@@ -328,7 +287,7 @@
             <div class="packCardContainer">
                 <div class="packCard">
                     <div class="packImage">
-                        <img src="../Project developpement web/Swisse/68f8c6b3eba00.jpg" alt="">
+                        <img src="../assets/Images/Project developpement web/Swisse/68f8c6b3eba00.jpg" alt="">
                         <p class="discount">9% Off</p>
                     </div>
                     <div class="packText">
@@ -354,7 +313,7 @@
                 </div>
                 <div class="packCard">
                     <div class="packImage">
-                        <img src="../Project developpement web/Swisse/68f8c6b3eba00.jpg" alt="">
+                        <img src="../assets/Images/Project developpement web/Swisse/68f8c6b3eba00.jpg" alt="">
                         <p class="discount">9% Off</p>
                     </div>
                     <div class="packText">
@@ -380,7 +339,7 @@
                 </div>
                 <div class="packCard">
                     <div class="packImage">
-                        <img src="../Project developpement web/Swisse/68f8c6b3eba00.jpg" alt="">
+                        <img src="../assets/Images/Project developpement web/Swisse/68f8c6b3eba00.jpg" alt="">
                         <p class="discount">9% Off</p>
                     </div>
                     <div class="packText">
@@ -406,7 +365,7 @@
                 </div>
                 <div class="packCard">
                     <div class="packImage">
-                        <img src="../Project developpement web/Swisse/68f8c6b3eba00.jpg" alt="">
+                        <img src="../assets/Images/Project developpement web/Swisse/68f8c6b3eba00.jpg" alt="">
                         <p class="discount">9% Off</p>
                     </div>
                     <div class="packText">
@@ -432,7 +391,7 @@
                 </div>
                 <div class="packCard">
                     <div class="packImage">
-                        <img src="../Project developpement web/Swisse/68f8c6b3eba00.jpg" alt="">
+                        <img src="../assets/Images/Project developpement web/Swisse/68f8c6b3eba00.jpg" alt="">
                         <p class="discount">9% Off</p>
                     </div>
                     <div class="packText">
@@ -458,7 +417,7 @@
                 </div>
                 <div class="packCard">
                     <div class="packImage">
-                        <img src="../Project developpement web/Swisse/68f8c6b3eba00.jpg" alt="">
+                        <img src="../assets/Images/Project developpement web/Swisse/68f8c6b3eba00.jpg" alt="">
                         <p class="discount">9% Off</p>
                     </div>
                     <div class="packText">
