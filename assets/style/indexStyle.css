@@ -1175,5 +1175,45 @@ footer hr{
 }
 /* end of footer  */
 
+main{
+    position: relative;
+}
+
+.text-container{
+
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    z-index: 10;
+}
+
+.text-container h1{
+    font-size: clamp(2em,5vw,4em);
+    color: white;
+    text-shadow: 0px 0px 05px black;
+}
+.text-container p{
+    color: white;
+    font-size: clamp(14px,5vw,1.1em);
+    text-shadow: 0px 0px 05px black;
+}
 
 
+.text-container a{
+    padding: 13px 30px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1.5px solid var(white);
+    border-radius: 7px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: 0.2s all ease;
+    background-color: var(--accentColor);
+    color: white;
+    text-shadow: 0px 0px 05px black;
+
+}
+.text-container .button{
+    margin-top: 2em;
+}
