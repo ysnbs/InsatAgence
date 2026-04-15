@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playwrite+NZ+Basic:wght@100..400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../assets/style/styleSignIn.css">
+    <link rel="stylesheet" href="../assets/style/styleSignUp.css">
     
 
 </head>
@@ -44,7 +44,7 @@
         <div class="two">
            <form action="" method="post">
                 <div class="text">
-                    <h3>Sign In</h3>
+                    <h3>Sign Up</h3>
                 </div>
                 <div class="input">
                     <input type="text" name="passport" id="passport" placeholder="Passport">
@@ -61,7 +61,7 @@
                     <input type="submit" value="Sign In" id="signIn">
                     <div>
                         <p>Don't have an account?</p>
-                        <a href="interfacSignUp.php">Sign Up</a>
+                        <a href="interfaceSignIn.php">Sign In</a>
                     </div>
                 </div>
                 

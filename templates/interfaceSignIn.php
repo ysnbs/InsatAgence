@@ -41,27 +41,38 @@
 
 
         </div>
+
+
+
+
         <div class="two">
-           <form action="" method="post">
+           <form action="../controller/signUpController.php" method="post">
                 <div class="text">
                     <h3>Sign In</h3>
                 </div>
                 <div class="input">
-                    <input type="text" name="passport" id="passport" placeholder="Passport">
-                    <input type="Password" placeholder="Password" name="password">
+                    <div class="nom">
+                        <input type="text" name="nom" id="passport" placeholder="First Name" require>
+                        <input type="text" placeholder="Last Name" name="prenom" require>
+                    </div>
                     <div>
-                        <div class="fehaCheck">
-                            <input type="checkbox" name="remember" id="rememberMe">
-                            <p>Remember me</p>
-                        </div>
-                        <a href="">Forgot password?</a>
+                        <input type="email" name="email" id="email" placeholder="email@example.com" require>
+                        <input type="Password" placeholder="Password" name="password" require>
+                        <input type="text" name="passport" id="passport" placeholder="N° Passport" require >
+                        <input type="text" placeholder="example : +216 50559320" name="tel" require>
+                    </div>
+                    
+
+
+                    <div>
+
                     </div>
                 </div>
                 <div class="butt">
-                    <input type="submit" value="Sign In" id="signIn">
+                    <input type="submit" value="Sign Up" id="signIn">
                     <div>
                         <p>Don't have an account?</p>
-                        <a href="interfacSignUp.php">Sign Up</a>
+                        <a href="interfaceSignUp.php">Sign Up</a>
                     </div>
                 </div>
                 
