@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,11 +47,12 @@
             <li><a href="index.php">Home</a></li>
             <li><a href="offeres.php">Our Offers</a></li>
             <li><a href="ClientReview.php">Avis Clients</a></li>
-            <li><a href="#destination">Destination</a></li>
+            <li><a href="destination.php">Destination</a></li>
             <li><a href="historique.php">Historique</a></li>
             <li class="last"><a href="contactus.php" >Contact</a></li>
         </ul>
     </div>
+
 
 
 

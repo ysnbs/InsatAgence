@@ -57,7 +57,7 @@
     <!-- end of main  -->
 
     <!-- start of after main  -->
-     <div class="feat">
+    <div class="feat">
 
          <div class="textGeneral">
              <p>Core Features</p>
@@ -65,44 +65,45 @@
              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vero numquam tenetur perspiciatis, amet magnam aperiam autem unde excepturi quo, alias expedita ut temporibus exercitationem dolore at beatae rerum consequuntur.</p>
  
          </div>
-    <div class="featureContainer">
+        <div class="featureContainer">
         <div class="featureCardContainer">
-                <div class="featureCard">
-                    <span></span>
-                    <i class="fa-regular fa-flag"></i>
-                    <h3>Tell Us What You Want To Do</h3>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-                    <p>100+ Reviews</p>
 
-                </div>
-                <div class="featureCard">
-                    <span></span>
-                    <i class="fa-regular fa-flag"></i>
-                    <h3>Tell Us What You Want To Do</h3>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-                    <p>100+ Reviews</p>
+            <div class="featureCard">
+                <span></span>
+                <i class="fa-solid fa-map-location-dot"></i>
+                <h3>Choose Your Destination</h3>
+                <p>Select from hundreds of amazing destinations worldwide, tailored to your travel style and budget.</p>
+                <p>250+ Destinations</p>
+            </div>
 
-                </div>
-                <div class="featureCard">
-                    <span></span>
-                    <i class="fa-regular fa-flag"></i>
-                    <h3>Tell Us What You Want To Do</h3>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-                    <p>100+ Reviews</p>
-                    <span></span>
-                </div>
-                <div class="featureCard">
-                    <span></span>
-                    <i class="fa-regular fa-flag"></i>
-                    <h3>Tell Us What You Want To Do</h3>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-                    <p>100+ Reviews</p>
-                    
-                </div>
+            <div class="featureCard">
+                <span></span>
+                <i class="fa-solid fa-calendar-check"></i>
+                <h3>Book Your Trip Easily</h3>
+                <p>Simple and fast booking process with flexible dates and secure online payment options.</p>
+                <p>500+ Bookings</p>
+            </div>
+
+            <div class="featureCard">
+                <span></span>
+                <i class="fa-solid fa-headset"></i>
+                <h3>24/7 Customer Support</h3>
+                <p>Our travel experts are available anytime to assist you before, during, and after your trip.</p>
+                <p>Rated 4.9/5</p>
+                <span></span>
+            </div>
+
+            <div class="featureCard">
+                <span></span>
+                <i class="fa-solid fa-star"></i>
+                <h3>Best Price Guarantee</h3>
+                <p>Enjoy top-quality experiences at competitive prices with exclusive deals and discounts.</p>
+                <p>Best Deals</p>
+            </div>
+
         </div>
-
     </div>
-
+        
 
         
     </div>
@@ -297,164 +298,180 @@
 
         <div class="packCardBigContainer">
             <div class="packCardContainer">
+
                 <div class="packCard">
                     <div class="packImage">
-                        <img src="../assets/Images/Project developpement web/Swisse/68f8c6b3eba00.jpg" alt="">
-                        <p class="discount">9% Off</p>
+                        <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401" alt="">
+                        <p class="discount">15% Off</p>
                     </div>
                     <div class="packText">
-                        <h2>USA Holidays Tours</h2>
-                        <p class="price">$2,000</p>
-                        <p>Lorem Ipsum is simply dummy text of the industry</p>
+                        <h2>New York City Escape</h2>
+                        <p class="price">$1,850</p>
+                        <p>Experience the vibrant life of NYC with guided tours,shopping,and iconic landmarks.</p>
                         <ul>
-                            <li>Trip Advisor </li>
-                            <li>No Charges</li>
+                            <li>4.8 Rating</li>
+                            <li>Free Cancellation</li>
                         </ul>
                         <hr>
                         <div>
                             <div class="location">
                                 <i class="fa-solid fa-location-dot"></i>
-                                <span>New York</span>
+                                <span>New York, USA</span>
                             </div>
                             <div class="time">
                                 <i class="fa-regular fa-clock"></i>
-                                <span>10 Days - 9 Nights</span>
+                                <span>7 Days - 6 Nights</span>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="packCard">
                     <div class="packImage">
-                        <img src="../assets/Images/Project developpement web/Swisse/68f8c6b3eba00.jpg" alt="">
-                        <p class="discount">9% Off</p>
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="">
+                        <p class="discount">10% Off</p>
                     </div>
                     <div class="packText">
-                        <h2>USA Holidays Tours</h2>
-                        <p class="price">$2,000</p>
-                        <p>Lorem Ipsum is simply dummy text of the industry</p>
+                        <h2>Paris Romantic Getaway</h2>
+                        <p class="price">$2,200</p>
+                        <p>Enjoy a romantic escape in Paris with guided tours and fine dining.</p>
                         <ul>
-                            <li>Trip Advisor </li>
-                            <li>No Charges</li>
+                            <li>5.0 Rating</li>
+                            <li>Breakfast Included</li>
                         </ul>
                         <hr>
                         <div>
                             <div class="location">
                                 <i class="fa-solid fa-location-dot"></i>
-                                <span>New York</span>
+                                <span>Paris, France</span>
                             </div>
                             <div class="time">
                                 <i class="fa-regular fa-clock"></i>
-                                <span>10 Days - 9 Nights</span>
+                                <span>6 Days - 5 Nights</span>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="packCard">
                     <div class="packImage">
-                        <img src="../assets/Images/Project developpement web/Swisse/68f8c6b3eba00.jpg" alt="">
-                        <p class="discount">9% Off</p>
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c" alt="">
+                        <p class="discount">12% Off</p>
                     </div>
                     <div class="packText">
-                        <h2>USA Holidays Tours</h2>
-                        <p class="price">$2,000</p>
-                        <p>Lorem Ipsum is simply dummy text of the industry</p>
+                        <h2>Dubai Luxury Adventure</h2>
+                        <p class="price">$2,500</p>
+                        <p>Discover Dubai with desert safari and luxury experiences.</p>
                         <ul>
-                            <li>Trip Advisor </li>
-                            <li>No Charges</li>
+                            <li>4.7 Rating</li>
+                            <li>All Inclusive</li>
                         </ul>
                         <hr>
                         <div>
                             <div class="location">
                                 <i class="fa-solid fa-location-dot"></i>
-                                <span>New York</span>
+                                <span>Dubai, UAE</span>
                             </div>
                             <div class="time">
                                 <i class="fa-regular fa-clock"></i>
-                                <span>10 Days - 9 Nights</span>
+                                <span>5 Days - 4 Nights</span>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="packCard">
                     <div class="packImage">
-                        <img src="../assets/Images/Project developpement web/Swisse/68f8c6b3eba00.jpg" alt="">
-                        <p class="discount">9% Off</p>
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="">
+                        <p class="discount">18% Off</p>
                     </div>
                     <div class="packText">
-                        <h2>USA Holidays Tours</h2>
-                        <p class="price">$2,000</p>
-                        <p>Lorem Ipsum is simply dummy text of the industry</p>
+                        <h2>Bali Tropical Retreat</h2>
+                        <p class="price">$1,600</p>
+                        <p>Relax in Bali’s beaches with spa and nature tours.</p>
                         <ul>
-                            <li>Trip Advisor </li>
-                            <li>No Charges</li>
+                            <li>4.9 Rating</li>
+                            <li>Free Airport Pickup</li>
                         </ul>
                         <hr>
                         <div>
                             <div class="location">
                                 <i class="fa-solid fa-location-dot"></i>
-                                <span>New York</span>
+                                <span>Bali, Indonesia</span>
                             </div>
                             <div class="time">
                                 <i class="fa-regular fa-clock"></i>
-                                <span>10 Days - 9 Nights</span>
+                                <span>8 Days - 7 Nights</span>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="packCard">
                     <div class="packImage">
-                        <img src="../assets/Images/Project developpement web/Swisse/68f8c6b3eba00.jpg" alt="">
-                        <p class="discount">9% Off</p>
+                        <img src="https://images.unsplash.com/photo-1529260830199-42c24126f198" alt="">
+                        <p class="discount">14% Off</p>
                     </div>
                     <div class="packText">
-                        <h2>USA Holidays Tours</h2>
-                        <p class="price">$2,000</p>
-                        <p>Lorem Ipsum is simply dummy text of the industry</p>
+                        <h2>Rome Historical Tour</h2>
+                        <p class="price">$1,900</p>
+                        <p>Explore Rome’s history and ancient landmarks.</p>
                         <ul>
-                            <li>Trip Advisor </li>
-                            <li>No Charges</li>
+                            <li>4.6 Rating</li>
+                            <li>Guide Included</li>
                         </ul>
                         <hr>
                         <div>
                             <div class="location">
                                 <i class="fa-solid fa-location-dot"></i>
-                                <span>New York</span>
+                                <span>Rome, Italy</span>
                             </div>
                             <div class="time">
                                 <i class="fa-regular fa-clock"></i>
-                                <span>10 Days - 9 Nights</span>
+                                <span>7 Days - 6 Nights</span>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="packCard">
                     <div class="packImage">
-                        <img src="../assets/Images/Project developpement web/Swisse/68f8c6b3eba00.jpg" alt="">
-                        <p class="discount">9% Off</p>
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="">
+                        <p class="discount">20% Off</p>
                     </div>
                     <div class="packText">
-                        <h2>USA Holidays Tours</h2>
-                        <p class="price">$2,000</p>
-                        <p>Lorem Ipsum is simply dummy text of the industry</p>
+                        <h2>Maldives Honeymoon</h2>
+                        <p class="price">$3,200</p>
+                        <p>Luxury villas, crystal waters, and unforgettable sunsets.</p>
                         <ul>
-                            <li>Trip Advisor </li>
-                            <li>No Charges</li>
+                            <li>5.0 Rating</li>
+                            <li>All Inclusive</li>
                         </ul>
                         <hr>
                         <div>
                             <div class="location">
                                 <i class="fa-solid fa-location-dot"></i>
-                                <span>New York</span>
+                                <span>Maldives</span>
                             </div>
                             <div class="time">
                                 <i class="fa-regular fa-clock"></i>
-                                <span>10 Days - 9 Nights</span>
+                                <span>6 Days - 5 Nights</span>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
+    
+
+
+
+
+
+
+    </div>
+</div>
     </div>
    <!-- end of best packs part  -->
     <!-- end of this part  -->
