@@ -3,7 +3,7 @@
         private static string $dbname = "bdprojetweb1";
         private static string $host = "localhost";
         private static string $user ="root";
-        private static string $password = "";
+        private static string $password = "rayen2005@@@";
         protected static $db = null;
 
         private function __construct()

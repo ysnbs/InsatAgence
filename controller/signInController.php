@@ -1,5 +1,4 @@
-<?php 
-    
+<?php
     session_start();
     ini_set("display_errors",1);
     ini_set("display_startup_errors",1);
@@ -15,16 +14,15 @@
     $username = $nom ."_" . $prenom;
 
     if(isset($nom) && isset($prenom) && isset($email) && isset($password) && isset($tel) && isset($role)){
-        $user = new utilisateur($nom,$prenom,$email,$password, $tel,$role);
-        echo "hello";
+        $user = new utilisateur();
         if($user->existeUser($email,$password)){
             header("Location: ../templates/interfaceSignIn.php");
             exit();
         }else{
-            echo $nom;
             $user->addUser($username,$email,$password,$tel,$role);
             $_SESSION["username"]= $username;
             $_SESSION["role"]= $role;
+            setcookie("username",$username,time() + 5000,"/");
             header("Location: ../templates/index.php");
             exit();
     

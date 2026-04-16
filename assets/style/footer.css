@@ -1,0 +1,21 @@
+footer{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--textColor);
+    color: white;
+    padding: 1.5em;
+    font-weight: bold;
+    gap: 1.5em;
+}
+footer .footerOne{
+    color: white;
+}
+footer hr{
+    height: 15px;
+    width: 2px;
+    background-color: white;
+}

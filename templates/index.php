@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -153,7 +157,7 @@
                 <p>Buy a Tour Without</p>
                 <h1>Leaving Your Home</h1>
                 <p>Using our website, you can easily find and book any tour you want. Mobile users will definitely enjoy our app available on all devices.</p>
-                <button><a href="../partie sign in sign up/index.html">Book Now</a></button>
+                <button><a href="offeres.php">Book Now</a></button>
             </div>
         </div>
 <!-- end of the part that has a background mountain -->

@@ -8,8 +8,8 @@
          * This function permet de inserer du data au database au table correspondant
          */
         public function addUser(...$param): void{
-            $placeHolders = null. "," .implode(',' , array_fill(0,count($param),'?'));
-            $req = self::$db->prepare("insert into {$this->tableName} values($placeHolders)");
+            $placeHolders =  implode(',' , array_fill(0,count($param),'?'));
+            $req = self::$db->prepare("insert into {$this->tableName} values(null,$placeHolders)");
             $req->execute($param);
         }
 
@@ -32,6 +32,12 @@
             $req = self::$db->prepare("select * from {$this->tableName} where email = ? and password = ? ");
             $req->execute([$email,$password]);
             return $req->fetch(PDO::FETCH_ASSOC) != null;
+        }
+
+        public function userData($email,$password){
+            $req = self::$db->prepare("select * from {$this->tableName} where email = ? and password = ?");
+            $req->execute([$email,$password]);
+            return $req->fetch(PDO::FETCH_ASSOC);
         }
     }
 ?>

@@ -1,143 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="../assets/style/contactus.css">
-  <link rel="stylesheet" href="../assets/style/navbar.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/style/navbar.css">
+    <link rel="stylesheet" href="../assets/style/footer.css">
+    <link rel="stylesheet" href="../assets/style/contactus2.css">
+    
 </head>
-
 <body>
-<?php require("navbar.php"); ?>
+    <?php require "navbar.php" ?>
+    <br>
+    <div class="mainContainer">     
+        <div class="firstPart">
+            <div class="partie-fou9">
+                <h1>Get In Touch</h1>
+                <p>I'd like to hear from you!</p>
+                <p>If you have any inquiries or just want to say hi , please use the contact From!</p>
+            </div>
 
-<div class="contact">
-    <div class="visitus">
-        <i class="bi-house-fill"></i>
-        <p>Adress: Insat centre_urbain tunis</p>
+            <div class="partie-bas">
+                <div>
+                    <i class="bi bi-envelope"></i>
+                    <a href="mailto:Societe@gmail.com">Societe@gmail.com</a>
+                </div>
+                <div>
+                    <i class="bi bi-hand-thumbs-up"></i>
+                    <ul>   
+                        <li><i class="bi bi-facebook"></i></li>
+                        <li><i class="bi bi-linkedin"></i></li>
+                        <li><i class="bi bi-instagram"></i></li>
+                        <li><i class="bi bi-twitter"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="secondPart">
+            <form action="../controller/contactUsController.php" method="POST" class="row g-3">
+                <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">First Name</label>
+                    <input type="email" class="form-control" id="inputEmail4">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Last Name</label>
+                    <input type="TEXT" class="form-control" >
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="email@example.com">
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress2" class="form-label">Message</label>
+                    <textarea name="" id=""  class="form-control"></textarea>
+                </div>
+                
+                <div class="col-12 lastElement">
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </form>
+
+        </div>
     </div>
-    <div class="callus">
-        <i class="bi-telephone-fill"></i> 
-        <a href="tel:+21612345678">Phone Number: +216 12 345 678</a>
-    </div>
-    <div class="contactus">
-        <i class="bi-envelope-fill"></i> 
-        <a href="mailto:yassinbenslama13@gmail.com">Email:yassinbenslama13@gmail.com</a>
-    </div>
-    <canvas id="canvas"></canvas>
-</div>
-  
-<script>
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-const contactDiv = document.querySelector(".contact");
-const colors = ["#ff4d6d", "#ffd60a", "#2ec4b6", "#4361ee", "#f72585"];
-
-let width, height;
-let arraycircle = [];
-
-// ⭐ resize d'abord
-function resizeCanvas() {
-  const ratio = window.devicePixelRatio || 1;
-  width = contactDiv.offsetWidth;
-  height = contactDiv.offsetHeight;
-  canvas.width = width * ratio;
-  canvas.height = height * ratio;
-
-  canvas.style.width = width + "px";
-  canvas.style.height = height + "px";
-
-  ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
-}
-
-resizeCanvas();
-window.addEventListener("resize", resizeCanvas);
-
-
-// ⭐ objet
-function cercle() {
-  this.x = Math.random() * width;
-  this.y = Math.random() * height;
-  this.dx = (Math.random() - 0.5) * 2; 
-  this.dy = (Math.random() - 0.5) * 2;
-  this.r = Math.random() * 3 + 1;
-  this.color = colors[Math.floor(Math.random() * colors.length)];
-
-  this.draw = function() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-    ctx.fillStyle = this.color;
-    ctx.fill();
-  }
-
-  this.update = function() {
-
-    // ⭐ rebond propre
-    if (this.x + this.r > width) {
-      this.x = width - this.r;
-      this.dx = -this.dx;
-    }
-
-    if (this.x - this.r < 0) {
-      this.x = this.r;
-      this.dx = -this.dx;
-    }
-
-    if (this.y + this.r > height) {
-      this.y = height - this.r;
-      this.dy = -this.dy;
-    }
-
-    if (this.y - this.r < 0) {
-      this.y = this.r;
-      this.dy = -this.dy;
-    }
-
-    this.x += this.dx;
-    this.y += this.dy;
-
-    this.draw();
-  }
-}
-
-// ⭐ création APRÈS resize
-for (let i = 0; i < 100; i++) {
-  arraycircle.push(new cercle());
-}
-
-
-// ⭐ animation
-function animate() {
-  requestAnimationFrame(animate);
-  ctx.clearRect(0, 0, width, height);
-
-  for (let i = 0; i < arraycircle.length; i++) {
-    arraycircle[i].update();
-  }
-
-  // collisions
-  for (let i = 0; i < arraycircle.length; i++) {
-    for (let j = i + 1; j < arraycircle.length; j++) {
-
-      const dx = arraycircle[i].x - arraycircle[j].x;
-      const dy = arraycircle[i].y - arraycircle[j].y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
-
-      if (distance < arraycircle[i].r + arraycircle[j].r) {
-        arraycircle[i].dx = -arraycircle[i].dx;
-        arraycircle[i].dy = -arraycircle[i].dy;
-
-        arraycircle[j].dx = -arraycircle[j].dx;
-        arraycircle[j].dy = -arraycircle[j].dy;
-      }
-    }
-  }
-}
-
-animate();
-</script>
+    <?php require "footer.php"; ?>
 </body>
 </html>

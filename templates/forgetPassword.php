@@ -13,7 +13,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../assets/style/styleSignUp.css">
     
-
+    <style>
+        .butt p{
+            font-size: 11px;
+            padding-top: 1em;
+            width: 55%;
+            margin: auto;
+        }
+    </style>
 </head>
 <body>
     <div class="background"></div>
@@ -44,26 +51,19 @@
         <div class="two">
            <form action="../controller/signUpController.php" method="post">
                 <div class="text">
-                    <h3>Sign Up</h3>
+                    <h3>Reset Password</h3>
                 </div>
                 <div class="input">
-                    <input type="text" name="email" id="email" placeholder="email">
-                    <input type="Password" placeholder="Password" name="password">
-                    <div>
-                        <div class="fehaCheck">
-                            <input type="checkbox" name="remember" id="rememberMe">
-                            <p>Remember me</p>
-                        </div>
-                        <a href="forgetPassword.php">Forgot password?</a>
-                    </div>
+                    <input type="text" name="email" id="passport" placeholder="examlpe@gmail.com" require>
+                    <input type="Password" placeholder="example: +216 505559320" name="n° tel" require>
+                    
+
                 </div>
                 <div class="butt">
-                    <input type="submit" value="Sign Up" id="signIn">
-                    <div>
-                        <p>Don't have an account?</p>
-                        <a href="interfaceSignIn.php">Sign In</a>
-                    </div>
+                    <input type="submit" value="Send Verification Email" id="verifMail">
+                    <p>You will recieve an email where you can reset your password and sign up again</p>
                 </div>
+
                 
            </form>
         </div>

@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="button">
-                <a href="interfaceSignIn.php">Find your tour</a>
+                <a href="interfaceSignUp.php">Find your tour</a>
             </div>
         </div>
 
@@ -40,6 +40,9 @@
     <!-- partie loutaneya  -->
     <div class="partTwo">
         <ul>
+            <?php if(isset($_SESSION['role']) && $_SESSION['role']=="entreprise") : ?>
+                <li><a href="adminPanel.php" class="admin">Admin's Panel</a></li>
+            <?php endif; ?>
             <li><a href="index.php">Home</a></li>
             <li><a href="offeres.php">Our Offers</a></li>
             <li><a href="ClientReview.php">Avis Clients</a></li>

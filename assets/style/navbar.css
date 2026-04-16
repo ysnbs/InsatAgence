@@ -188,20 +188,20 @@ body{
     .partTwo{
         position: initial;
     }
-    ul{
+    .partTwo ul{
         justify-content: space-around;
-
         min-width: 650px;
     }
 }
 
 @media (max-width:650px) {
-    ul{
+    .partTwo ul{
         flex-direction: column;
-
         width: 100%;
+        padding-left: 0;
+        margin-bottom: 0;
     }
-    ul li{
+    .partTwo ul li{
         padding: 15px;
         border-bottom: 1px solid #acabab;
     }
@@ -209,4 +209,24 @@ body{
         border-bottom: none ;
     }
     .partTwo{height: fit-content;}
+}
+
+
+.admin{
+    position: relative;
+
+}
+.admin::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--accentColor);
+    border-radius: 50%;
+    transition: 1s width ease;
+}
+.admin:hover::after{
+    width: 100%;
 }
