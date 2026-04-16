@@ -16,6 +16,8 @@
 
 </head>
 <body>
+
+    
     <div class="background"></div>
     <div class="overlay"></div>
     <div class="container">
@@ -46,20 +48,19 @@
 
 
         <div class="two">
-           <form action="../controller/signUpController.php" method="post">
+           <form action="../controller/signInController.php" method="POST">
                 <div class="text">
                     <h3>Sign In</h3>
                 </div>
                 <div class="input">
                     <div class="nom">
-                        <input type="text" name="nom" id="passport" placeholder="First Name" require>
-                        <input type="text" placeholder="Last Name" name="prenom" require>
+                        <input type="text" name="nom" id="passport" placeholder="First Name" require autocomplete="off">
+                        <input type="text" placeholder="Last Name" name="prenom" require autocomplete="off">
                     </div>
                     <div>
-                        <input type="email" name="email" id="email" placeholder="email@example.com" require>
-                        <input type="Password" placeholder="Password" name="password" require>
-                        <input type="text" name="passport" id="passport" placeholder="N° Passport" require >
-                        <input type="text" placeholder="example : +216 50559320" name="tel" require>
+                        <input type="email" name="email" id="email" placeholder="email@example.com" require autocomplete="off">
+                        <input type="Password" placeholder="Password" name="password" require autocomplete="off">
+                        <input type="text" placeholder="example : +216 50559320" name="tel" require autocomplete="off">
                     </div>
                     
 
@@ -68,8 +69,18 @@
 
                     </div>
                 </div>
+                <div class="radio">
+                    <div>
+                        <input type="radio" id="utilisateur" value="client" name="role">
+                        <label for="utilisateur">Client</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="entreprise" value="entreprise" name="role" >
+                        <label for="entreprise">Entreprise</label>
+                    </div>
+                </div>
                 <div class="butt">
-                    <input type="submit" value="Sign Up" id="signIn">
+                    <input type="submit" value="Sign In" id="signIn">
                     <div>
                         <p>Don't have an account?</p>
                         <a href="interfaceSignUp.php">Sign Up</a>

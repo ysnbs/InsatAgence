@@ -42,7 +42,7 @@
 
         </div>
         <div class="two">
-           <form action="" method="post">
+           <form action="../controller/signUpController.php" method="post">
                 <div class="text">
                     <h3>Sign Up</h3>
                 </div>
@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <div class="butt">
-                    <input type="submit" value="Sign In" id="signIn">
+                    <input type="submit" value="Sign Up" id="signIn">
                     <div>
                         <p>Don't have an account?</p>
                         <a href="interfaceSignIn.php">Sign In</a>

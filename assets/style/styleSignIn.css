@@ -272,3 +272,12 @@ div.container .one .down ul li a:hover{color: var(--mainColorAfta7-);}
 .container .two form .input .nom input{
     width: 40%;
 }
+
+
+.radio{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    user-select: none;
+    font-size: smaller;
+}

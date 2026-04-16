@@ -3,13 +3,20 @@
         private static string $dbname = "bdprojetweb1";
         private static string $host = "localhost";
         private static string $user ="root";
-        private static string $password = "rayen2005@@@";
+        private static string $password = "";
         protected static $db = null;
 
         private function __construct()
         {
             try{
-                self::$db = new PDO("mysql:host=" . self::$host . ";dbname=" . self::$dbname . ";charset=utf8",self::$user,self::$password);
+                self::$db = new PDO(
+                "mysql:host=" . self::$host . ";dbname=" . self::$dbname . ";charset=utf8",
+                self::$user,
+                self::$password,
+                [
+                    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+                ]
+            );
             }catch(PDOException $e){
                 echo $e->getMessage();
                 die();
@@ -23,6 +30,6 @@
             return self::$db;
         }
     }
- 
+
 
 ?>
